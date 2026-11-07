@@ -183,6 +183,11 @@ details.cs[open] summary::before{content:"\2212"}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .contact{background:var(--sheet);border:1px solid var(--rule)}}
 :root[data-theme="dark"] .contact{background:var(--sheet);border:1px solid var(--rule)}
 .foot{font-size:13px;color:var(--mute);margin-top:26px}
+.praise{margin:20px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 18px;align-items:start;padding:20px 24px;border-left:3px solid var(--pass);background:var(--sheet);border-radius:0 8px 8px 0}
+.praise .qm{font-family:var(--f-display);font-weight:800;font-size:52px;line-height:.8;color:var(--pass)}
+.praise blockquote{margin:0;font-family:var(--f-display);font-weight:700;font-size:21px;line-height:1.3;text-wrap:balance}
+.praise p{grid-column:2;font-size:14px;color:var(--ink-2);margin-top:8px}
+@media (max-width:720px){.praise{grid-template-columns:minmax(0,1fr)}.praise p{grid-column:1}.praise .qm{display:none}}
 
 @media (max-width:980px){
   .shell{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:20px}
@@ -265,6 +270,12 @@ details.cs[open] summary::before{content:"\2212"}
           <div class="barrow"><span class="who">SOW Builder</span><div class="track"><div class="fill after"></div></div><span class="v">3–4 min</span></div>
         </div>
       </div>
+
+      <figure class="praise">
+        <span class="qm" aria-hidden="true">“</span>
+        <blockquote>We would not have been able to get through this merger without Bo.</blockquote>
+        <p>Krystne Browning, HR Manager, Network for Hope. Two organ procurement organizations merged onto Paycor: legacy data migration, combined payroll, a new departmental and GL structure, and a workforce that doubled to 320. <a href="https://www.paycor.com/resource-center/case-studies/network-for-hope/" target="_blank" rel="noopener">Read Paycor's case study ↗</a></p>
+      </figure>
     </section>
 
     <!-- SELECTED BUILDS -->
@@ -547,6 +558,7 @@ details.cs[open] summary::before{content:"\2212"}
               <li>Designed and built the TAM Command Center and SOW Builder, cutting SOW creation from 22.5 minutes to 3–4 with automated legal-language validation. Used by 29 people today and expanding company-wide as other teams' rates are added.</li>
               <li>Built an internal AI chatbot and workflow system that gives 27 TAMs instant access to institutional knowledge and customer context, cutting weekly discovery prep 4–5%.</li>
               <li>Own Paycor's most complex enterprise HCM engagements end to end, from pre-sale discovery to go-live, and serve as senior escalation point.</li>
+              <li>Guided Network for Hope through a two-organization merger onto Paycor, featured in a <a href="https://www.paycor.com/resource-center/case-studies/network-for-hope/" target="_blank" rel="noopener">Paycor case study</a>.</li>
               <li>Advise on pricing and engagement models, contributing to $3M+ in annual team revenue.</li>
               <li>Redesigned intake, assignment and capacity planning for a 27-person org: assignment accuracy up ~65% year over year, resolution time down about two weeks.</li>
               <li>Now rebuilding capacity in the dashboard around the hours each TAM is actually committed to each week, now and in the weeks ahead, replacing fixed per-engagement estimates. The goal: steadier SLA performance and headcount planning based on real workload.</li>
@@ -665,7 +677,7 @@ details.cs[open] summary::before{content:"\2212"}
 <script>
 /* Visitor analytics (Microsoft Clarity). Paste your Clarity project ID below. */
 (function(){
-  var CLARITY_ID = "YOUR_CLARITY_ID";
+  var CLARITY_ID = "za47opgtk4";
   if (!CLARITY_ID || CLARITY_ID === "YOUR_CLARITY_ID") return;
   (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CLARITY_ID);
   var cl = function(){ try { window.clarity.apply(null, arguments); } catch(e){} };
