@@ -220,6 +220,9 @@ details.cs[open] summary::before{content:"\2212"}
   .entry{padding:22px 18px 20px}
   .contact{grid-template-columns:minmax(0,1fr);padding:28px 20px}
 }
+.shot{margin:18px 0 6px;max-width:860px}
+.shot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line, rgba(127,127,127,.3));box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.shot figcaption{font-size:13px;color:var(--ink-2);margin-top:8px}
 </style>
 
 </head>
@@ -353,6 +356,7 @@ details.cs[open] summary::before{content:"\2212"}
           </div>
           <h3>UC Command Center</h3>
           <p class="sum">A dashboard that runs my degree: this week's plan synced live with Todoist, a semester calendar, grades with a GPA simulator, an academic advising tracker and statistics on study time versus results.</p>
+          <figure class="shot"><img src="uc-command-center.webp" width="1440" height="900" loading="lazy" alt="UC Command Center weekly planner: tasks by day with course tags and time estimates, summary tiles for time left and tasks done, and a sidebar of upcoming quizzes and exams."><figcaption>The This Week view, shown with sample data. Checking a task off here completes it in Todoist.</figcaption></figure>
           <div class="spec">
             <div><span class="label">Problem</span><p>Five courses, a full-time job and deadlines spread across Canvas, syllabi, email and Todoist. No single view of what was due, how I was doing, or what to register for next.</p></div>
             <div><span class="label">Built</span><p>An installable web app wired to Todoist, with a shared database for grades, syllabi and advising notes, plus its own backlog and change log.</p></div>
