@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>UC Command Center | Bo Oetjen</title>
+<meta name="description" content="A dashboard that runs my degree: this week's plan synced live with Todoist, a semester calendar, grades with a GPA simulator, an academic advising tracker and statistics on study time versus results.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UC Command Center | Bo Oetjen">
+<meta property="og:description" content="A dashboard that runs my degree: this week's plan synced live with Todoist, a semester calendar, grades with a GPA simulator, an academic advising tracker and statistics on study time versus results.">
+<meta property="og:image" content="https://bo-oetjen.com/og-uc.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body style="margin:0">
+<header class="topbar"><div class="wrap">
+  <a class="tb-mark" href="../index.html">Bo Oetjen<small>Builder · TAM · AI student</small></a>
+  <nav class="tb-links" aria-label="Site">
+    <a class="tl" aria-current="page" href="../index.html#projects">Projects</a>
+    <a class="tl hide-sm" href="../index.html#experience">Experience</a>
+    <a class="tl hide-sm" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn sm" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <main class="page">
+    <section class="ph" id="top">
+      <div class="crumb"><a href="../index.html#projects">← All projects</a></div>
+      <div class="e-top"><span class="label">Personal · <b>School operations</b></span><span class="tag live">Used daily</span></div>
+      <h1>UC Command Center</h1>
+      <p class="sum">A dashboard that runs my degree: this week's plan synced live with Todoist, a semester calendar, grades with a GPA simulator, an academic advising tracker and statistics on study time versus results.</p>
+      <figure class="shot"><img alt="UC Command Center weekly planner: tasks by day with course tags and time estimates, summary tiles for time left and tasks done, and a sidebar of upcoming quizzes and exams." height="900" loading="lazy" src="../uc-command-center.webp" width="1440"/><figcaption>The This Week view, shown with sample data. Checking a task off here completes it in Todoist.</figcaption></figure>
+      <div class="stats">
+<div class="stat"><b>62</b><span>changes shipped and logged in 10 days</span></div>
+<div class="stat"><b>8</b><span>views: planner, calendar, grades, advising, stats and more</span></div>
+<div class="stat"><b>Live</b><span>two-way sync: click a task to complete it in Todoist</span></div>
+</div>
+      <div class="spec">
+<div><span class="label">Problem</span><p>Five courses, a full-time job and deadlines spread across Canvas, syllabi, email and Todoist. No single view of what was due, how I was doing, or what to register for next.</p></div>
+<div><span class="label">Built</span><p>An installable web app wired to Todoist, with a shared database for grades, syllabi and advising notes, plus its own backlog and change log.</p></div>
+<div><span class="label">Result</span><p>62 logged changes in the first 10 days. It replaced a weekly planner I rebuilt by hand and became the one place I check each morning.</p></div>
+</div>
+      <div class="tools"><span>HTML · CSS · JavaScript</span><span>Todoist API via MCP</span><span>Shared database</span><span>Claude</span><span>PWA (installed as a Mac app)</span></div>
+    </section>
+    <section id="story">
+      <div class="sec-head"><h2>The full story</h2><p>The problem, what I built and why, and what's next.</p></div>
+      <article class="story"><div><h4>Why I built it</h4><p>I started with a printable weekly planner generated from Todoist. It worked, but keeping it current was a job in itself. The Command Center makes the planner live and adds the parts of school that had no home: grades, degree requirements and conversations with my advisor.</p></div>
+<div><h4>What it does</h4>
+<ul>
+<li><b>This Week:</b> tasks grouped by course and ordered by urgency, a "time left today" estimate, and automatic roll-forward of unfinished work that marks genuine overdue items differently from work started early.</li>
+<li><b>Calendar:</b> assignments, UC academic dates, federal holidays, class meetings and my work PTO on one month view.</li>
+<li><b>Grades &amp; GPA:</b> a grade book per course and a GPA simulator that applies each syllabus's drop and replacement rules, with what-if scores that are never saved over real ones.</li>
+<li><b>Academic Advising:</b> requirements remaining, courses I'm eligible to register for, alternative course plans and a log of advisor replies.</li>
+<li><b>Statistics:</b> estimated effort by course and week compared with grades, so I can see where time is going.</li>
+<li><b>Admin:</b> a backlog with statuses (Planned, In Progress, Not Planned, Done) and a dated change log. I run my own tool the way I'd run a product.</li>
+</ul>
+</div>
+<div><h4>Decisions worth noting</h4>
+<ul>
+<li>Todoist stays the source of truth. The dashboard reads and completes tasks but never rewrites an instructor's due date.</li>
+<li>Timezone safety: the date is always checked in Eastern time, after an early bug flagged work overdue hours before midnight.</li>
+<li>Every change is logged, so I can explain why the tool behaves the way it does.</li>
+</ul>
+</div></article>
+    </section>
+    <div class="cta-band"><p>Want to talk about a build like this for your team?</p><div><a class="btn" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a><a class="btn ghost" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+    <nav class="pager" aria-label="More projects"><a href="tam-command-center.html"><span class="label">← Previous</span><b>TAM Command Center &amp; SOW Builder</b></a><a class="nx" href="family-cruise-planner.html"><span class="label">Next →</span><b>Family Cruise Planner</b></a></nav>
+    <p class="foot" style="margin-top:-56px">Work projects are described without customer data or proprietary details. Updated November 2026. This site uses Microsoft Clarity to measure visits and how pages are used; see the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
+  </main>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'); if(!btn) return;
+  btn.addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1600);};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';};
+    try{navigator.clipboard.writeText(t).then(done,fallback);}catch(e){fallback();}
+  });
+})();
+</script>
+<script>
+/* Visitor analytics (Microsoft Clarity). Runs only on bo-oetjen.com, so previews don't count. */
+(function(){
+  if (!/(^|\.)bo-oetjen\.com$/.test(location.hostname)) return;
+  var CLARITY_ID = "za47opgtk4";
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CLARITY_ID);
+  var cl = function(){ try { window.clarity.apply(null, arguments); } catch(e){} };
+  cl("set", "page", "uc-command-center");
+  // Where the visit came from: ?utm_source=linkedin, remembered across pages of the same visit
+  var q = new URLSearchParams(location.search), ss = {};
+  try { ss = JSON.parse(sessionStorage.getItem("bo_src") || "{}"); } catch(e){}
+  var src = q.get("utm_source") || q.get("src") || ss.source;
+  if (!src && document.referrer && document.referrer.indexOf(location.hostname) < 0) { try { src = new URL(document.referrer).hostname.replace(/^www\./,""); } catch(e){} }
+  var camp = q.get("utm_campaign") || ss.campaign;
+  try { sessionStorage.setItem("bo_src", JSON.stringify({source: src, campaign: camp})); } catch(e){}
+  cl("set", "source", src || "direct");
+  if (camp) cl("set", "campaign", camp);
+  // Time on this page
+  var t0 = Date.now(), sent = false;
+  function bucket(ms){ var s = ms/1000; return s < 5 ? "0-5s" : s < 15 ? "5-15s" : s < 30 ? "15-30s" : s < 60 ? "30-60s" : s < 180 ? "1-3min" : "3min+"; }
+  function report(){ if (sent) return; sent = true; cl("set", "time_uc-command-center", bucket(Date.now() - t0)); }
+  document.addEventListener("visibilitychange", function(){ if (document.hidden) report(); });
+  window.addEventListener("pagehide", report);
+  // What people click
+  document.querySelectorAll("[data-ev]").forEach(function(a){ a.addEventListener("click", function(){ cl("event", a.getAttribute("data-ev")); }); });
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_linkedin"); }); });
+  document.querySelectorAll('a[href*="github.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_github"); }); });
+  var cb = document.getElementById("copy-email");
+  if (cb) cb.addEventListener("click", function(){ cl("event", "copied_email"); });
+})();
+</script>
+</body>
+</html>

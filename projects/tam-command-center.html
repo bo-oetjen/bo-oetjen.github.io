@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TAM Command Center & SOW Builder | Bo Oetjen</title>
+<meta name="description" content="One dashboard where a 27-person Technical Account Management team runs its day-to-day work instead of jumping between about 15 separate tools: build a Statement of Work in minutes with its legal langu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TAM Command Center & SOW Builder | Bo Oetjen">
+<meta property="og:description" content="One dashboard where a 27-person Technical Account Management team runs its day-to-day work instead of jumping between about 15 separate tools: build a Statement of Work in minutes with its legal langu">
+<meta property="og:image" content="https://bo-oetjen.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body style="margin:0">
+<header class="topbar"><div class="wrap">
+  <a class="tb-mark" href="../index.html">Bo Oetjen<small>Builder · TAM · AI student</small></a>
+  <nav class="tb-links" aria-label="Site">
+    <a class="tl" aria-current="page" href="../index.html#projects">Projects</a>
+    <a class="tl hide-sm" href="../index.html#experience">Experience</a>
+    <a class="tl hide-sm" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn sm" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <main class="page">
+    <section class="ph" id="top">
+      <div class="crumb"><a href="../index.html#projects">← All projects</a></div>
+      <div class="e-top"><span class="label">Work · <b>Paycor TAM team, other teams next</b></span><span class="tag live">SOW Builder live</span></div>
+      <h1>TAM Command Center &amp; SOW Builder</h1>
+      <p class="sum">One dashboard where a 27-person Technical Account Management team runs its day-to-day work instead of jumping between about 15 separate tools: build a Statement of Work in minutes with its legal language checked automatically, plan capacity, track engagements and time off, and run customer tax audits. The SOW Builder went live to the team in November 2026, and other teams in the organization are set to plug into it next.</p>
+      
+      <div class="stats">
+<div class="stat"><b>22.5 → 3–4</b><span>minutes to produce a SOW</span></div>
+<div class="stat"><b>258</b><span>pricing scenarios matched the approved calculator to the cent</span></div>
+<div class="stat"><b>34 of 35</b><span>tax issues caught that a manual review found</span></div>
+</div>
+      <div class="spec">
+<div><span class="label">Problem</span><p>SOWs took over 20 minutes each, prices lived in a workbook whose copies drifted, nothing confirmed Legal's wording survived editing, leaders couldn't see SOW volume or timing, and the team worked across about 15 separate tools.</p></div>
+<div><span class="label">Built</span><p>A guided SOW Builder that blocks any SOW whose legal language changed, one governed rates page with history, capacity planning, on-time delivery analytics, engagement tracking, time off, a recap writer and a rules-based tax audit engine.</p></div>
+<div><span class="label">Result</span><p>About 85% less time per SOW, pricing matched to the cent before the old workbook was retired, and the first live view leadership has had of the team's work.</p></div>
+</div>
+      <div class="tools"><span>Claude</span><span>Copilot Studio (prototype)</span><span>Dashboard design</span><span>Validation rules</span><span>Analytics</span><span>Salesforce</span><span>Microsoft Planner</span><span>DocuSign (planned)</span></div>
+    </section>
+    <section id="story">
+      <div class="sec-head"><h2>The full story</h2><p>The problem, what I built and why, and what's next.</p></div>
+      <article class="story"><div><h4>The problem</h4><p>Statements of Work are how the TAM team turns a customer's request into billable work. Each one took about 22.5 minutes to scope, price and assemble by hand. Prices came from a separate workbook whose copies drifted, with no history of changes. Nothing confirmed that the wording Legal had approved survived editing. SOWs existed only as files attached in the CRM, so leaders couldn't see how many were written, for how much, or whether engagements finished on time. Time off, engagement intake, recap emails and the team's links each lived in a different tool.</p></div>
+<div><h4>Why a dashboard instead of an agent</h4><p>I first designed the SOW Builder in Copilot Studio as a multi-agent system: an orchestrator handing scoping, pricing, document creation and quality checks to specialist agents. In practice the "interview me" flow took minutes between responses, the formatting of the output was inconsistent, and the result was never guaranteed. Company data protection policies also blocked the knowledge sources the agents needed. I pivoted to a lightweight dashboard with every field on one page. Choosing the reliable tool over the more impressive one is how the time dropped to 3–4 minutes.</p></div>
+<div><h4>What I built</h4>
+<ul class="checks">
+<li><span><b>SOW Builder with a Legal language check.</b> A four-step guided form prices the engagement, applies credits and waivers, and shows a live preview. Before a SOW can be downloaded, it's compared with the Legal-approved master: only approved fields can change, a failing SOW is blocked with the differences shown, and every check is logged.</span></li>
+<li><span><b>Compliance reporting.</b> An Excel validation report of every SOW built, plus an executive summary prepared for Legal's compliance review of tools that touch legal documents.</span></li>
+<li><span><b>One governed source for prices.</b> Effective-dated rates with a required reason and a full history, and each SOW records which rate set priced it. Before the old workbook was retired, 258 test engagements were matched to the cent.</span></li>
+<li><span><b>Capacity planning and product knowledge.</b> Hours committed to each TAM against hours available, looking back and ahead, with a "who can take it?" ranking by product knowledge and open hours.</span></li>
+<li><span><b>On-time delivery.</b> Compares when each engagement closed with the date its SOW promised, without adding new CRM fields.</span></li>
+<li><span><b>Tax audit engine.</b> Turns customers' payroll tax reports into a preliminary audit: fixed rules flag likely issues, a TAM reviews the exceptions, and the tool builds an internal review copy and a customer-ready workbook. In testing it caught 34 of the 35 issues a manual review found. Employee names are never stored, and the optional AI explanation of a finding never receives personal or dollar data.</span></li>
+<li><span><b>Engagement tracking, time off and recaps.</b> An intake form and board that replaced a Planner process, a team time-off calendar with manager approvals that replaced a separate tracker, and a recap writer that turns a call transcript into a customer email.</span></li>
+<li><span><b>Analytics and governance.</b> Usage, business analytics and a fiscal-year forecast, test and live modes, role-based access, release notes and a backlog fed by team feedback.</span></li>
+</ul>
+</div>
+<div><h4>Where it stands</h4><p>I built the dashboard in about two weeks, within my own Claude budget, to show leadership what it could do for the team. The SOW Builder is live to the team. The other pages are built and in QA while IT and Product decide whether to host the dashboard internally or license Claude for the team, so every TAM's data flows into one live view.</p></div>
+<div><h4>What's next</h4>
+<ul class="checks road">
+<li><span><b>Other teams.</b> Other teams in the organization are set to plug into the SOW Builder next, and the dashboard is a model for other groups that lack this level of reporting.</span></li>
+<li><span><b>One place to work.</b> Connect DocuSign, Salesforce, Gainsight, Gong, Power BI and Microsoft 365 so TAMs can send SOWs for signature, check a customer's credits, log activity and analyze calls without leaving the dashboard.</span></li>
+<li><span><b>Call prep assistant.</b> An AI assistant that pulls a customer's full picture from those systems before a call, instead of piecing it together from separate tools.</span></li>
+<li><span><b>Local tax review.</b> Extend the tax audit engine to local taxes.</span></li>
+</ul>
+</div>
+<div><h4>What it shows</h4><p>Taking an operational process end to end: measuring the baseline, protecting what must not change (legal language, pricing, personal data), turning invisible work into numbers leadership can see, and pivoting when the first tool didn't fit.</p></div></article>
+    </section>
+    <div class="cta-band"><p>Want to talk about a build like this for your team?</p><div><a class="btn" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a><a class="btn ghost" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+    <nav class="pager" aria-label="More projects"><a class="nx" href="uc-command-center.html"><span class="label">Next →</span><b>UC Command Center</b></a></nav>
+    <p class="foot" style="margin-top:-56px">Work projects are described without customer data or proprietary details. Updated November 2026. This site uses Microsoft Clarity to measure visits and how pages are used; see the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
+  </main>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'); if(!btn) return;
+  btn.addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1600);};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';};
+    try{navigator.clipboard.writeText(t).then(done,fallback);}catch(e){fallback();}
+  });
+})();
+</script>
+<script>
+/* Visitor analytics (Microsoft Clarity). Runs only on bo-oetjen.com, so previews don't count. */
+(function(){
+  if (!/(^|\.)bo-oetjen\.com$/.test(location.hostname)) return;
+  var CLARITY_ID = "za47opgtk4";
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CLARITY_ID);
+  var cl = function(){ try { window.clarity.apply(null, arguments); } catch(e){} };
+  cl("set", "page", "tam-command-center");
+  // Where the visit came from: ?utm_source=linkedin, remembered across pages of the same visit
+  var q = new URLSearchParams(location.search), ss = {};
+  try { ss = JSON.parse(sessionStorage.getItem("bo_src") || "{}"); } catch(e){}
+  var src = q.get("utm_source") || q.get("src") || ss.source;
+  if (!src && document.referrer && document.referrer.indexOf(location.hostname) < 0) { try { src = new URL(document.referrer).hostname.replace(/^www\./,""); } catch(e){} }
+  var camp = q.get("utm_campaign") || ss.campaign;
+  try { sessionStorage.setItem("bo_src", JSON.stringify({source: src, campaign: camp})); } catch(e){}
+  cl("set", "source", src || "direct");
+  if (camp) cl("set", "campaign", camp);
+  // Time on this page
+  var t0 = Date.now(), sent = false;
+  function bucket(ms){ var s = ms/1000; return s < 5 ? "0-5s" : s < 15 ? "5-15s" : s < 30 ? "15-30s" : s < 60 ? "30-60s" : s < 180 ? "1-3min" : "3min+"; }
+  function report(){ if (sent) return; sent = true; cl("set", "time_tam-command-center", bucket(Date.now() - t0)); }
+  document.addEventListener("visibilitychange", function(){ if (document.hidden) report(); });
+  window.addEventListener("pagehide", report);
+  // What people click
+  document.querySelectorAll("[data-ev]").forEach(function(a){ a.addEventListener("click", function(){ cl("event", a.getAttribute("data-ev")); }); });
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_linkedin"); }); });
+  document.querySelectorAll('a[href*="github.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_github"); }); });
+  var cb = document.getElementById("copy-email");
+  if (cb) cb.addEventListener("click", function(){ cl("event", "copied_email"); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Self-Syncing Weekly Academic Planner | Bo Oetjen</title>
+<meta name="description" content="A reusable Claude Skill that reconciles a weekly planner with Todoist on one command. It marks completions, slots in new tasks, moves changed due dates, rolls work forward at midnight and archives fin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Self-Syncing Weekly Academic Planner | Bo Oetjen">
+<meta property="og:description" content="A reusable Claude Skill that reconciles a weekly planner with Todoist on one command. It marks completions, slots in new tasks, moves changed due dates, rolls work forward at midnight and archives fin">
+<meta property="og:image" content="https://bo-oetjen.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../site.css">
+</head>
+<body style="margin:0">
+<header class="topbar"><div class="wrap">
+  <a class="tb-mark" href="../index.html">Bo Oetjen<small>Builder · TAM · AI student</small></a>
+  <nav class="tb-links" aria-label="Site">
+    <a class="tl" aria-current="page" href="../index.html#projects">Projects</a>
+    <a class="tl hide-sm" href="../index.html#experience">Experience</a>
+    <a class="tl hide-sm" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn sm" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a>
+  </nav>
+</div></header>
+<div class="wrap">
+  <main class="page">
+    <section class="ph" id="top">
+      <div class="crumb"><a href="../index.html#projects">← All projects</a></div>
+      <div class="e-top"><span class="label">AI workflow · <b>Claude Skill + Todoist</b></span><span class="tag live">v11</span></div>
+      <h1>Self-Syncing Weekly Academic Planner</h1>
+      <p class="sum">A reusable Claude Skill that reconciles a weekly planner with Todoist on one command. It marks completions, slots in new tasks, moves changed due dates, rolls work forward at midnight and archives finished days, and it flags every change instead of making it silently.</p>
+      
+      
+      <div class="spec">
+<div><span class="label">Problem</span><p>A printable planner drifted out of sync every time something changed in Todoist, and rebuilding it by hand happened several times a week.</p></div>
+<div><span class="label">Built</span><p>A packaged Skill with written business rules, a live Todoist integration and an HTML template. Refined over 11 versions from failures caught in real use.</p></div>
+<div><span class="label">Result</span><p>A multi-step manual rebuild became one "/update" command I trust not to drop or misstate a deadline.</p></div>
+</div>
+      <div class="tools"><span>Claude Skills</span><span>Todoist MCP</span><span>Prompt design</span><span>HTML template</span></div>
+    </section>
+    <section id="story">
+      <div class="sec-head"><h2>The full story</h2><p>The problem, what I built and why, and what's next.</p></div>
+      <article class="story"><div><h4>Design rules that came from real failures</h4>
+<ul>
+<li><b>The planner is a view, not a copy.</b> It can flag something overdue or move it on the page, but never changes a real due date in Todoist.</li>
+<li><b>Never silently delete.</b> Completed work is crossed off and tagged, so progress stays visible.</li>
+<li><b>Check local time first.</b> The server's "today" can roll over hours before Eastern midnight, which once caused work to be flagged overdue a day early.</li>
+<li><b>Encode judgment.</b> Graded work outranks optional lecture videos unless a video is a prerequisite for something due soon. Lighter workloads land on Bengals game days when deadlines allow.</li>
+</ul>
+</div>
+<div><h4>What I'd change for a team</h4><p>Turn the natural-language rules into explicit, testable logic; add validation and logging so a person isn't the only safeguard; and separate the personal preferences from the reusable sync engine so it can be configured per user. Protecting a source of truth, reconciling state safely and encoding real business judgment is the same pattern behind client-facing automation, with more users and higher stakes.</p></div></article>
+    </section>
+    <div class="cta-band"><p>Want to talk about a build like this for your team?</p><div><a class="btn" href="mailto:bo.oetjen@gmail.com?subject=Hello%20from%20your%20portfolio" data-ev="clicked_email">Email me</a><a class="btn ghost" href="https://www.linkedin.com/in/bo-oetjen" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+    <nav class="pager" aria-label="More projects"><a href="family-cruise-planner.html"><span class="label">← Previous</span><b>Family Cruise Planner</b></a><a class="nx" href="fraud-classifier.html"><span class="label">Next →</span><b>Insurance Fraud Classifier</b></a></nav>
+    <p class="foot" style="margin-top:-56px">Work projects are described without customer data or proprietary details. Updated November 2026. This site uses Microsoft Clarity to measure visits and how pages are used; see the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
+  </main>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'); if(!btn) return;
+  btn.addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1600);};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';};
+    try{navigator.clipboard.writeText(t).then(done,fallback);}catch(e){fallback();}
+  });
+})();
+</script>
+<script>
+/* Visitor analytics (Microsoft Clarity). Runs only on bo-oetjen.com, so previews don't count. */
+(function(){
+  if (!/(^|\.)bo-oetjen\.com$/.test(location.hostname)) return;
+  var CLARITY_ID = "za47opgtk4";
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CLARITY_ID);
+  var cl = function(){ try { window.clarity.apply(null, arguments); } catch(e){} };
+  cl("set", "page", "weekly-planner");
+  // Where the visit came from: ?utm_source=linkedin, remembered across pages of the same visit
+  var q = new URLSearchParams(location.search), ss = {};
+  try { ss = JSON.parse(sessionStorage.getItem("bo_src") || "{}"); } catch(e){}
+  var src = q.get("utm_source") || q.get("src") || ss.source;
+  if (!src && document.referrer && document.referrer.indexOf(location.hostname) < 0) { try { src = new URL(document.referrer).hostname.replace(/^www\./,""); } catch(e){} }
+  var camp = q.get("utm_campaign") || ss.campaign;
+  try { sessionStorage.setItem("bo_src", JSON.stringify({source: src, campaign: camp})); } catch(e){}
+  cl("set", "source", src || "direct");
+  if (camp) cl("set", "campaign", camp);
+  // Time on this page
+  var t0 = Date.now(), sent = false;
+  function bucket(ms){ var s = ms/1000; return s < 5 ? "0-5s" : s < 15 ? "5-15s" : s < 30 ? "15-30s" : s < 60 ? "30-60s" : s < 180 ? "1-3min" : "3min+"; }
+  function report(){ if (sent) return; sent = true; cl("set", "time_weekly-planner", bucket(Date.now() - t0)); }
+  document.addEventListener("visibilitychange", function(){ if (document.hidden) report(); });
+  window.addEventListener("pagehide", report);
+  // What people click
+  document.querySelectorAll("[data-ev]").forEach(function(a){ a.addEventListener("click", function(){ cl("event", a.getAttribute("data-ev")); }); });
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_linkedin"); }); });
+  document.querySelectorAll('a[href*="github.com"]').forEach(function(a){ a.addEventListener("click", function(){ cl("event", "clicked_github"); }); });
+  var cb = document.getElementById("copy-email");
+  if (cb) cb.addEventListener("click", function(){ cl("event", "copied_email"); });
+})();
+</script>
+</body>
+</html>
